@@ -1,0 +1,17 @@
+sudo: required
+language: generic
+services:
+  - docker
+
+script:
+  - docker build -t vielasis/android-sdk-lite .
+
+after_success:
+  - if [ "$TRAVIS_BRANCH" == "master" ]; then
+    docker login -u="$DOCKER_UN" -p="$DOCKER_PW";
+    if [ -n "$TRAVIS_TAG" ]; then
+    docker push vielasis/android-sdk-lite:"$TRAVIS_TAG";
+    else
+    docker push vielasis/android-sdk-lite;
+    fi;
+    fi;
