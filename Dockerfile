@@ -21,8 +21,8 @@ ENV PATH ${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools
 
 # Update SDK
 RUN /opt/tools/accept_license.sh "android update sdk -u -a --filter platform-tools,extra-android-support,android-25,android-24,android-23,android-22,android-21" \
-  && /opt/tools/accept_license.sh "android update sdk -u -a --filter build-tools-25.0.0,build-tools-24.0.3,build-tools-24.0.2,build-tools-24.0.1,build-tools-24.0.0,build-tools-23.0.3,build-tools-23.0.2,build-tools-23.0.1,build-tools-22.0.1,build-tools-21.1.2" \
+  && /opt/tools/accept_license.sh "android update sdk -u -a --filter build-tools-25.0.2,build-tools-25.0.0,build-tools-24.0.3,build-tools-24.0.2,build-tools-24.0.1,build-tools-24.0.0,build-tools-23.0.3,build-tools-23.0.2,build-tools-23.0.1,build-tools-22.0.1,build-tools-21.1.2" \
   && /opt/tools/accept_license.sh "android update sdk -u -a --filter extra-android-m2repository,extra-google-m2repository,extra-google-google_play_services,addon-google_apis-google-24,addon-google_apis-google-23,addon-google_apis-google-22,addon-google_apis-google-21"
 
 # Version name
-ENV ANDROID_LITE_REV 1.0.0
+ENV ANDROID_LITE_REV 1.0.1
