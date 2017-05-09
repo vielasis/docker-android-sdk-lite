@@ -29,4 +29,4 @@ RUN sdkmanager --package_file=/opt/tools/build-tools.pkgs --package_file=/opt/to
 RUN yes | sdkmanager --licenses
 
 # Version name
-ENV ANDROID_LITE_REV 2.0.1
+ENV ANDROID_LITE_REV 2.0.2
