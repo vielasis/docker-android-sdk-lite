@@ -23,10 +23,10 @@ RUN cd /opt \
 ENV PATH ${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/tools/bin:${ANDROID_HOME}/platform-tools
 
 # Install all the necessary items
-RUN sdkmanager --package_file=/opt/tools/build-tools.pkgs --package_file=/opt/tools/platform.pkgs --package_file=/opt/tools/extra.pkgs
+RUN sdkmanager --package_file=/opt/tools/build-tools.pkgs --package_file=/opt/tools/platform.pkgs --package_file=/opt/tools/extra.pkgs --verbose
 
 # Accept other licenses
 RUN yes | sdkmanager --licenses
 
 # Version name
-ENV ANDROID_LITE_REV 2.0.0
+ENV ANDROID_LITE_REV 2.0.1
